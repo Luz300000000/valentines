@@ -23,21 +23,13 @@ h1 {
     flex-wrap: wrap;
 }
 
-/* #no-button {
+#no-button {
     margin: 0 10px;
-    color: white;
-    background-color: red;
-    height: 40px !important;
-    width: auto;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
+}
 
-    p {
-        margin: 0;
-        object-fit: contain;
-    }
-} */
+#yes-button {
+    margin:0 10px;
+}
 
 /* #yes-button {
     margin: 0 10px;
