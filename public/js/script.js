@@ -17,6 +17,10 @@ const answers = [
 
 const no_button = document.getElementById('no-button');
 const yes_button = document.getElementById('yes-button');
+const click_cat = document.getElementById('banner');
+const click_me = document.getElementById('click_me');
+click_me.style.display = 'none';
+
 let i = 0;
 let size = 50;
 let clicks = 0;
@@ -25,7 +29,7 @@ no_button.addEventListener('click', () => {
     // Change banner source
     let banner = document.getElementById('banner');
     if (clicks === 0) {
-        banner.src = "images/no.gif";
+        banner.src = "./public/images/no.gif";
         refreshBanner();
     }
     clicks++;
@@ -53,19 +57,32 @@ no_button.addEventListener('click', () => {
 yes_button.addEventListener('click', () => {
     // change banner gif path
     let banner = document.getElementById('banner');
-    banner.style.display = 'none';
-    // banner.src = "images/yes.gif";
-    // refreshBanner();
-
+    banner.src = "./public/images/yes_clean.gif";
+    refreshBanner();
+    // hide title
+    let title = document.getElementById('title');
+    title.style.display = "none";
+    // show click_me note
+    click_me.style.display = "block";
     // hide buttons div
     let buttons = document.getElementsByClassName('buttons')[0];
     buttons.style.display = "none";
     // show message div
     let message = document.getElementsByClassName('message')[0];
     message.style.display = "block";
+});
 
-    // change tittle
-    
+click_cat.addEventListener('click', () => {
+    // change banner gif path
+    let banner = document.getElementById('banner');
+    banner.src = "./public/images/for_you.gif";
+    refreshBanner();
+    // hide click_me note
+    click_me.style.display = "none";
+    // new title
+    let title = document.getElementById('title');
+    title.textContent = "Made this for you <3";
+    title.style.display = "block";
 });
 
 function refreshBanner() {
