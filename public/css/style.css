@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transform: scale(0.7) translateY(-80px);
 }
 
 h1 {
@@ -30,20 +31,6 @@ h1 {
 #yes-button {
     margin:0 10px;
 }
-
-/* #yes-button {
-    margin: 0 10px;
-    color: white;
-    border: none;
-    background-color: green;
-    cursor: pointer;
-    height: 40px;
-
-    p {
-        margin: 0;
-        object-fit: contain;
-    }
-} */
 
 /* Make responsive for mobile */
 @media (max-width: 768px) {
@@ -75,6 +62,10 @@ h1 {
         width: auto;
         height: 250px;
     }
+}
+
+#banner {
+    cursor: default;
 }
 
 /* <!-- HTML !--> */

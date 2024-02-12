@@ -44,6 +44,8 @@ yes_button.addEventListener('click', () => {
 	// hide buttons div
 	let buttons = document.getElementsByClassName('buttons')[0];
 	buttons.style.display = "none";
+	// change cursor to pointer
+	banner.style.cursor = "pointer";
 
 	click_cat.addEventListener('click', () => {
 		// change banner gif path
@@ -54,6 +56,8 @@ yes_button.addEventListener('click', () => {
 		banner.style.height = "250px";
 		// hide click_me note
 		click_me.style.display = "none";
+		// change cursor to default again
+		banner.style.cursor = "default";
 		// new title
 		let title = document.getElementById('title');
 		title.textContent = "made this for you <3";
@@ -61,6 +65,16 @@ yes_button.addEventListener('click', () => {
 		// show message div
 		let message = document.getElementsByClassName('message')[0];
 		message.style.display = "block";
+		// hide playlist
+		let playlist = document.getElementById('playlist');
+		playlist.style.display = "none";
+		// show playlist on click
+		let show_playlist = document.getElementById('show_playlist');
+		show_playlist.addEventListener('click', () => {
+			playlist.style.display = "block";
+			show_playlist.style.display = "none";
+		});
+		
 	});
 });
 
@@ -89,7 +103,7 @@ function getRandomDiagonalPositionChange() {
     // Get a random diagonal direction
     var direction = getRandomDiagonalDirection();
     // Get a random distance to move (40, 100, or 160 pixels)
-    var distance = 100;
+    var distance = 70;
     // Calculate the change in position based on the direction and distance
     var positionChange = { top: 0, left: 0 };
     switch (direction) {
