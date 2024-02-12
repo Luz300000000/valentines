@@ -34,6 +34,8 @@ yes_button.addEventListener('click', () => {
 	let banner = document.getElementById('banner');
 	banner.src = "./public/images/yes_clean.gif";
 	refreshBanner();
+	//change banner size
+	banner.style.height = "450px";
 	// hide title
 	let title = document.getElementById('title');
 	title.style.display = "none";
@@ -48,6 +50,8 @@ yes_button.addEventListener('click', () => {
 		let banner = document.getElementById('banner');
 		banner.src = "./public/images/for_you.gif";
 		refreshBanner();
+		//change banner size
+		banner.style.height = "250px";
 		// hide click_me note
 		click_me.style.display = "none";
 		// new title
