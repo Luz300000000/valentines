@@ -24,7 +24,7 @@ no_button.addEventListener('click', () => {
 		setButtonPosition();
 		i++;
 	} else if (i === maxClicks - 1) {
-		alert("let's just start over (╥﹏╥)");
+		alert("... (╥﹏╥)");
 		location.reload();
 	}
 });
