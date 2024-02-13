@@ -67,7 +67,7 @@ yes_button.addEventListener('click', () => {
 		message.style.display = "block";
 
 		let body = document.getElementsByClassName('container');
-		body[0].style.transform = "scale(1.2)";
+		body[0].style.transform = "scale(1.2) translateY(80px)";
 
 		// hide playlist
 		let playlist = document.getElementById('playlist');
